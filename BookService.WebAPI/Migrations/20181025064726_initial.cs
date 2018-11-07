@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BookService.WebAPI.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -120,9 +120,9 @@ namespace BookService.WebAPI.Migrations
                 columns: new[] { "Id", "BirthDate", "Created", "FirstName", "LastName" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(1980, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2018, 9, 17, 9, 51, 5, 12, DateTimeKind.Local), "James", "Sharp" },
-                    { 2, new DateTime(1992, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2018, 9, 17, 9, 51, 5, 12, DateTimeKind.Local), "Sophie", "Netty" },
-                    { 3, new DateTime(1996, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2018, 9, 17, 9, 51, 5, 12, DateTimeKind.Local), "Elisa", "Yammy" }
+                    { 1, new DateTime(1980, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2018, 10, 25, 8, 47, 25, 976, DateTimeKind.Local), "James", "Sharp" },
+                    { 2, new DateTime(1992, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2018, 10, 25, 8, 47, 25, 976, DateTimeKind.Local), "Sophie", "Netty" },
+                    { 3, new DateTime(1996, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2018, 10, 25, 8, 47, 25, 976, DateTimeKind.Local), "Elisa", "Yammy" }
                 });
 
             migrationBuilder.InsertData(
@@ -130,8 +130,8 @@ namespace BookService.WebAPI.Migrations
                 columns: new[] { "Id", "Country", "Created", "Name" },
                 values: new object[,]
                 {
-                    { 1, "UK", new DateTime(2018, 9, 17, 9, 51, 5, 49, DateTimeKind.Local), "IT-publishers" },
-                    { 2, "Sweden", new DateTime(2018, 9, 17, 9, 51, 5, 49, DateTimeKind.Local), "FoodBooks" }
+                    { 1, "UK", new DateTime(2018, 10, 25, 8, 47, 26, 24, DateTimeKind.Local), "IT-publishers" },
+                    { 2, "Sweden", new DateTime(2018, 10, 25, 8, 47, 26, 24, DateTimeKind.Local), "FoodBooks" }
                 });
 
             migrationBuilder.InsertData(
@@ -139,9 +139,9 @@ namespace BookService.WebAPI.Migrations
                 columns: new[] { "Id", "Created", "FirstName", "LastName" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2018, 9, 17, 9, 51, 5, 66, DateTimeKind.Local), "Joe", "Pageturner" },
-                    { 2, new DateTime(2018, 9, 17, 9, 51, 5, 66, DateTimeKind.Local), "Linda", "Bookslaughter" },
-                    { 3, new DateTime(2018, 9, 17, 9, 51, 5, 66, DateTimeKind.Local), "Wendy", "Allreader" }
+                    { 1, new DateTime(2018, 10, 25, 8, 47, 26, 44, DateTimeKind.Local), "Joe", "Pageturner" },
+                    { 2, new DateTime(2018, 10, 25, 8, 47, 26, 44, DateTimeKind.Local), "Linda", "Bookslaughter" },
+                    { 3, new DateTime(2018, 10, 25, 8, 47, 26, 44, DateTimeKind.Local), "Wendy", "Allreader" }
                 });
 
             migrationBuilder.InsertData(
@@ -149,13 +149,13 @@ namespace BookService.WebAPI.Migrations
                 columns: new[] { "Id", "AuthorId", "Created", "FileName", "ISBN", "NumberOfPages", "Price", "PublisherId", "Title", "Year" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2018, 9, 17, 9, 51, 5, 146, DateTimeKind.Local), "book1.jpg", "123456789", 420, 24.99m, 1, "Learning C#", 2018 },
-                    { 2, 2, new DateTime(2018, 9, 17, 9, 51, 5, 146, DateTimeKind.Local), "book2.jpg", "45689132", 360, 35.99m, 1, "Mastering Linq", 2016 },
-                    { 3, 1, new DateTime(2018, 9, 17, 9, 51, 5, 146, DateTimeKind.Local), "book3.jpg", "15856135", 360, 50.00m, 1, "Mastering Xamarin", 2017 },
-                    { 4, 2, new DateTime(2018, 9, 17, 9, 51, 5, 146, DateTimeKind.Local), "book1.jpg", "56789564", 360, 45.00m, 1, "Exploring ASP.Net Core 2.0", 2018 },
-                    { 5, 2, new DateTime(2018, 9, 17, 9, 51, 5, 146, DateTimeKind.Local), "book2.jpg", "234546684", 420, 70.50m, 1, "Unity Game Development", 2017 },
-                    { 6, 3, new DateTime(2018, 9, 17, 9, 51, 5, 146, DateTimeKind.Local), "book3.jpg", "789456258", 40, 52.00m, 2, "Cooking is fun", 2007 },
-                    { 7, 3, new DateTime(2018, 9, 17, 9, 51, 5, 146, DateTimeKind.Local), "book1.jpg", "94521546", 53, 30.00m, 2, "Secret recipes", 2017 }
+                    { 1, 1, new DateTime(2018, 10, 25, 8, 47, 26, 124, DateTimeKind.Local), "book1.jpg", "123456789", 420, 24.99m, 1, "Learning C#", 2018 },
+                    { 2, 2, new DateTime(2018, 10, 25, 8, 47, 26, 124, DateTimeKind.Local), "book2.jpg", "45689132", 360, 35.99m, 1, "Mastering Linq", 2016 },
+                    { 3, 1, new DateTime(2018, 10, 25, 8, 47, 26, 124, DateTimeKind.Local), "book3.jpg", "15856135", 360, 50.00m, 1, "Mastering Xamarin", 2017 },
+                    { 4, 2, new DateTime(2018, 10, 25, 8, 47, 26, 124, DateTimeKind.Local), "book1.jpg", "56789564", 360, 45.00m, 1, "Exploring ASP.Net Core 2.0", 2018 },
+                    { 5, 2, new DateTime(2018, 10, 25, 8, 47, 26, 124, DateTimeKind.Local), "book2.jpg", "234546684", 420, 70.50m, 1, "Unity Game Development", 2017 },
+                    { 6, 3, new DateTime(2018, 10, 25, 8, 47, 26, 124, DateTimeKind.Local), "book3.jpg", "789456258", 40, 52.00m, 2, "Cooking is fun", 2007 },
+                    { 7, 3, new DateTime(2018, 10, 25, 8, 47, 26, 124, DateTimeKind.Local), "book1.jpg", "94521546", 53, 30.00m, 2, "Secret recipes", 2017 }
                 });
 
             migrationBuilder.InsertData(
@@ -163,12 +163,12 @@ namespace BookService.WebAPI.Migrations
                 columns: new[] { "Id", "BookId", "Created", "ReaderId", "Score" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2018, 9, 17, 9, 51, 5, 58, DateTimeKind.Local), 1, 3 },
-                    { 4, 1, new DateTime(2018, 9, 17, 9, 51, 5, 58, DateTimeKind.Local), 2, 4 },
-                    { 2, 2, new DateTime(2018, 9, 17, 9, 51, 5, 58, DateTimeKind.Local), 1, 2 },
-                    { 5, 2, new DateTime(2018, 9, 17, 9, 51, 5, 58, DateTimeKind.Local), 3, 2 },
-                    { 3, 3, new DateTime(2018, 9, 17, 9, 51, 5, 58, DateTimeKind.Local), 2, 5 },
-                    { 6, 3, new DateTime(2018, 9, 17, 9, 51, 5, 58, DateTimeKind.Local), 3, 3 }
+                    { 1, 1, new DateTime(2018, 10, 25, 8, 47, 26, 33, DateTimeKind.Local), 1, 3 },
+                    { 4, 1, new DateTime(2018, 10, 25, 8, 47, 26, 33, DateTimeKind.Local), 2, 4 },
+                    { 2, 2, new DateTime(2018, 10, 25, 8, 47, 26, 33, DateTimeKind.Local), 1, 2 },
+                    { 5, 2, new DateTime(2018, 10, 25, 8, 47, 26, 33, DateTimeKind.Local), 3, 2 },
+                    { 3, 3, new DateTime(2018, 10, 25, 8, 47, 26, 33, DateTimeKind.Local), 2, 5 },
+                    { 6, 3, new DateTime(2018, 10, 25, 8, 47, 26, 33, DateTimeKind.Local), 3, 3 }
                 });
 
             migrationBuilder.CreateIndex(
