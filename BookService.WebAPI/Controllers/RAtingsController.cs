@@ -2,6 +2,7 @@
 using BookService.WebAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace BookService.WebAPI.Controllers
@@ -18,11 +19,17 @@ namespace BookService.WebAPI.Controllers
         [HttpGet]
         public override async Task<IActionResult> Get()
         {
-            var result = new JsonSerializerSettings
+            var result = await repository.GetAllInclusive();
+
+            List<Rating> ratings = new List<Rating>();
+            foreach(Rating rating in result)
             {
-                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-            };
-            return Ok(JsonConvert.SerializeObject(await repository.GetAllInclusive(), result));
+                rating.Reader.Ratings = null;
+                rating.Book.Ratings = null;
+                ratings.Add(rating);
+            }
+
+            return Ok(JsonConvert.SerializeObject(ratings));
         }
     }
 }
