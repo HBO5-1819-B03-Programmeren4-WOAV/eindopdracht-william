@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Books with Vue.js";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<article id="app" class="row">
+    <header class="col-md-4">
+        <h3>{{ message }}</h3>   @*Vue mustache*@
+    </header>
+</article>
+
+@section scripts{
+    <script src="~/js/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Loading books...',
+            }
+        });
+    </script>
+}
+
+
