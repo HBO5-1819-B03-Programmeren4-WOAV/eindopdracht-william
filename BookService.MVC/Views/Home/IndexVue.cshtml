@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "IndexVue";
+}
+
+<h2>IndexVue</h2>
+<article id="app">
+    <h3>{{ message }}</h3>
+    <input type="text" v-model:value="message" />
+</article>
+
+
+@section scripts{
+    <script src="~/js/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Loading books...',
+                nogeen: 'nog iets',
+            }
+        });
+    </script>
+}
+
+
