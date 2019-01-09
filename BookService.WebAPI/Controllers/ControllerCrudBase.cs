@@ -13,6 +13,7 @@ namespace BookService.WebAPI.Controllers
         public ControllerCrudBase(R r)
         {
             repository = r;
+            // hier is de test
         }
 
         // GET: api/T
@@ -54,7 +55,7 @@ namespace BookService.WebAPI.Controllers
 
         // POST: api/T
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] T entity)
+        public virtual async Task<IActionResult> Post([FromBody] T entity)
         {
             if (!ModelState.IsValid)
             {
